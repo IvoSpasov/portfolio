@@ -20,3 +20,9 @@ p {
 li.active {
     padding-left: 40px;
 }
+
+.external {
+    max-width: 40px;
+    display: inline-block;
+    margin-left: 10px;
+}
