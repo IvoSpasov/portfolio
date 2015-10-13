@@ -26,3 +26,12 @@ li.active {
     display: inline-block;
     margin-right: 5px;
 }
+
+.well {
+    background-image: url("/Portfolio/images/dVision_(31).jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    height: 300px;
+    padding-top: 150px;
+}
