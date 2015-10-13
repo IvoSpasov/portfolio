@@ -22,7 +22,7 @@ li.active {
 }
 
 .external {
-    max-width: 40px;
+    max-width: 30px;
     display: inline-block;
-    margin-left: 10px;
+    margin-right: 5px;
 }
