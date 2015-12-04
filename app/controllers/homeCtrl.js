@@ -15,7 +15,29 @@ portfolio.controller('homeCtrl', ['$scope',
         }, {
             text: 'Inversion of Control Container - ',
             link: 'http://www.ninject.org/',
-            textForLink: 'Ninject'
+            linkText: 'Ninject',
+            linkIsInFront: false
+        },{
+            text: 'is used to automatically map the domain model objects to the ViewModel objects',
+            link: 'http://automapper.org/',
+            linkText: 'AutoMapper',
+            linkIsInFront: true
+        },{
+            text: 'is used to access and manipulate the DOM tree',
+            link: 'http://jquery.com/',
+            linkText: 'jQuery',
+            linkIsInFront: true
+        },{
+            text: 'Page is responsive on all screen sizes with',
+            link: 'http://getbootstrap.com/',
+            linkText: 'Bootstrap',
+            linkIsInFront: false
+        },{
+            text: 'Controls - Telerik Kendo UI'
+        },{
+            text: 'AJAX is used for adding new comments'
+        },{
+            text: 'There is one minute caching on the index page'
         }];
 
         $scope.speedHeroInfo = speedHeroInfo;

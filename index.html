@@ -50,9 +50,9 @@
     <section>
         <div class="row">
             <h2 class="col-sm-12">
-				<span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
-				<em>Speed Hero</em>
-			</h2>
+                <span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
+                <em>Speed Hero</em>
+            </h2>
         </div>
         <div class="row">
             <p class="col-sm-12">
@@ -74,44 +74,25 @@
                     <li class="list-group-item active">About</li>
                     <li class="list-group-item" ng-repeat="info in speedHeroInfo">
                         <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
+
+                        <span ng-if="info.link && info.linkIsInFront">
+                            <a href="{{info.link}}">{{info.linkText}}</a>
+                        </span>
+
                         {{info.text}}
+
+                        <span ng-if="info.link && !info.linkIsInFront">
+                            <a href="{{info.link}}">{{info.linkText}}</a>
+                        </span>
+
                     </li>
+
                     <li class="list-group-item">
                         <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                        Inversion of Control Container - <a href="http://www.ninject.org/">Ninject</a>
+                        There is protection against
+                        <span data-toggle="tooltip" data-placement="top" title="Cross-site Scripting ">XSS</span>
+                        attack
                     </li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                        <a href="http://automapper.org/">AutoMapper</a>
-                        is used to automatically map the domain model objects to the ViewModel objects
-                    </li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                        <a href="http://jquery.com/">jQuery</a>
-                        is used to access and manipulate the DOM tree
-                    </li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                        Page is responsive on all screen sizes with <a href="http://getbootstrap.com/">Bootstrap</a>
-                    </li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                        Controls - Telerik Kendo UI
-                    </li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                        AJAX is used for adding new comments
-                    </li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                        There is one minute caching on the index page
-                    </li>
-                        <li class="list-group-item">
-                        <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                            There is protection against
-                            <span  data-toggle="tooltip" data-placement="top" title="Cross-site Scripting ">XSS</span>
-                            attack
-                        </li>
                     <li class="list-group-item">
                         <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
                         IDE - Visual Studio
@@ -134,9 +115,9 @@
     <section>
         <div class="row">
             <h2 class="col-sm-12">
-				<span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
-				<em>Minesweeper</em>				
-			</h2>
+                <span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
+                <em>Minesweeper</em>
+            </h2>
         </div>
         <div class="row">
             <p class="col-sm-12">
@@ -193,6 +174,7 @@
                     <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
                     Game rules
                 </a>
+
                 <div class="modal fade" id="minesweeper-rules" tabindex="-1">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -208,14 +190,16 @@
                                     <li>Uncover a number, and it tells you how many mines
                                         lay hidden in the eight surrounding tiles.
                                         Information you use to deduce which nearby
-                                        squares are safe to click.</li>
+                                        squares are safe to click.
+                                    </li>
                                     <li>Use left mouse click to see what is behind a tile and a
-                                        right mouse click to mark a place of possible mine.</li>
+                                        right mouse click to mark a place of possible mine.
+                                    </li>
                                 </ol>
                             </div>
                             <div class="modal-footer">
                                 <a href="http://ivossss.github.io/Minesweeper/"
-                                        class="btn btn-primary">Play</a>
+                                   class="btn btn-primary">Play</a>
                             </div>
                         </div>
                     </div>
@@ -224,9 +208,11 @@
         </div>
     </section>
     <footer>
-        <hr />
+        <hr/>
         <div class="pull-right">
-            <p><small><em>2015 - The projects I've made from scratch - by Ivo Spasov</em></small></p>
+            <p>
+                <small><em>2015 - The projects I've made from scratch - by Ivo Spasov</em></small>
+            </p>
         </div>
     </footer>
 </div>
