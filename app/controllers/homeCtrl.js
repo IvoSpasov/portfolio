@@ -23,15 +23,9 @@ portfolio.controller('homeCtrl', ['$scope',
             linkText: 'AutoMapper',
             linkIsInFront: true
         },{
-            text: 'is used to access and manipulate the DOM tree',
-            link: 'http://jquery.com/',
-            linkText: 'jQuery',
-            linkIsInFront: true
+            text: '<a href="http://jquery.com/">jQuery</a> is used to access and manipulate the DOM tree',
         },{
-            text: 'Page is responsive on all screen sizes with',
-            link: 'http://getbootstrap.com/',
-            linkText: 'Bootstrap',
-            linkIsInFront: false
+            text: 'Page is responsive on all screen sizes with <a href="http://getbootstrap.com/">Bootstrap</a>'
         },{
             text: 'Controls - Telerik Kendo UI'
         },{

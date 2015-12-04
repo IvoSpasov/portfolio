@@ -76,10 +76,10 @@
                         <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
 
                         <span ng-if="info.link && info.linkIsInFront">
-                            <a href="{{info.link}}">{{info.linkText}}</a>
+                            <a href="{{info.link}}" ng-bind="info.linkText"></a>
                         </span>
 
-                        {{info.text}}
+                        <span ng-bind-html="info.text"></span>
 
                         <span ng-if="info.link && !info.linkIsInFront">
                             <a href="{{info.link}}">{{info.linkText}}</a>
@@ -220,7 +220,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="js/script.js" type="text/javascript"></script>
-<script src="libs/angular.js" type="text/javascript"></script>
+<script src="libs/angular/angular.min.js" type="text/javascript"></script>
+<script src="libs/angular/angular-sanitize.min.js" type="text/javascript"></script>
 <script src="app/app.js" type="text/javascript"></script>
 <script src="app/controllers/homeCtrl.js" type="text/javascript"></script>
 </body>
