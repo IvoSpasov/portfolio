@@ -10,9 +10,9 @@ portfolio.controller('projectsCtrl', ['$scope',
             ' Administrators can create, edit and delete posts and comments.';
 
         var vcsGitLink = '<a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control" class="vcs" title="Version control system">' +
-            'VCS - Git</a>';
-
-        var glyphiconLink = 'glyphicon glyphicon-link';
+            'VCS - Git</a>',
+            bootstrapText = 'Page is responsive on all screen sizes with <a href="http://getbootstrap.com/">Bootstrap</a>',
+            glyphiconLink = 'glyphicon glyphicon-link';
 
         var speedHeroAbout = [{
             text: 'Technology - ASP.NET MVC 5'
@@ -31,7 +31,7 @@ portfolio.controller('projectsCtrl', ['$scope',
         },{
             text: '<a href="http://jquery.com/">jQuery</a> is used to access and manipulate the DOM tree'
         },{
-            text: 'Page is responsive on all screen sizes with <a href="http://getbootstrap.com/">Bootstrap</a>'
+            text: bootstrapText
         },{
             text: 'Controls - Telerik Kendo UI'
         },{
@@ -45,7 +45,7 @@ portfolio.controller('projectsCtrl', ['$scope',
         },{
             text: vcsGitLink
         },{
-            text: '<a href="https://github.com/ivossss/SpeedHero">Source code</a>',
+            text: '<a href="https://github.com/ivossss/SpeedHero">Source Code</a>',
             glyphiconType: glyphiconLink
         }];
 
@@ -57,7 +57,7 @@ portfolio.controller('projectsCtrl', ['$scope',
             text: 'Drawing is done with ' +
             '<a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas</a>'
         },{
-            text: 'Page is responsive on all screen sizes with <a href="http://getbootstrap.com/">Bootstrap</a>'
+            text: bootstrapText
         },{
             text: 'Recursion algorithm is used to open all empty tiles next to each other'
         },{
@@ -65,7 +65,7 @@ portfolio.controller('projectsCtrl', ['$scope',
         },{
             text: vcsGitLink
         },{
-            text: '<a href="https://github.com/ivossss/Minesweeper">Source code</a>',
+            text: '<a href="https://github.com/ivossss/Minesweeper">Source Code</a>',
             glyphiconType: glyphiconLink
         }];
 
@@ -74,6 +74,7 @@ portfolio.controller('projectsCtrl', ['$scope',
             description: speedHeroDescription,
             url: 'http://speedhero.apphb.com/',
             imagePath: 'content/images/SpeedHero.png',
+            imageAlt: 'Speed Hero picture',
             about: speedHeroAbout,
             defaultGlyphiconType: 'glyphicon glyphicon-leaf'
         },{
@@ -81,6 +82,7 @@ portfolio.controller('projectsCtrl', ['$scope',
             description: 'A JavaScript version of the popular Microsoft Windows game.',
             url: 'http://ivossss.github.io/Minesweeper/',
             imagePath: 'content/images/minesweeper.png',
+            imageAlt: 'Minesweeper picture',
             about: minesweeperAbout,
             defaultGlyphiconType: 'glyphicon glyphicon-flash'
         }];

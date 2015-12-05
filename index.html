@@ -56,7 +56,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <a ng-href="{{project.url}}">
-                        <img ng-src="{{project.imagePath}}" alt="project-image" class="img-responsive"/>
+                        <img ng-src="{{project.imagePath}}" alt="{{project.imageAlt}}" class="img-responsive"/>
                     </a>
                 </div>
                 <div class="col-sm-8">
@@ -74,7 +74,6 @@
                             <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
                             Game rules
                         </a>
-
                         <div class="modal fade" id="minesweeper-rules" tabindex="-1">
                             <div class="modal-dialog">
                                 <div class="modal-content">
