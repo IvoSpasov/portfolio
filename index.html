@@ -14,11 +14,11 @@
     <!-- Bootstrap theme -->
     <link rel="stylesheet" href="http://bootswatch.com/slate/bootstrap.min.css"/>
     <!-- Custom styles -->
-    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="content/css/styles.css"/>
     <title>Ivo's Portfolio</title>
 </head>
-<body>
-<div class="container">
+<body ng-app="portfolio">
+<div class="container" ng-controller="homeCtrl">
     <header class="well">
         <div class="row">
             <div class="col-sm-11 col-sm-offset-1">
@@ -32,102 +32,55 @@
             <div class="col-sm-3 col-md-2">
                 <div class="pull-right">
                     <a href="mailto:ivospasov89@gmail.com">
-                        <img src="images/mail.png" alt="ivospasov89@gmail.com"
+                        <img src="content/images/mail.png" alt="ivospasov89@gmail.com"
                              class="img-responsive external"/>
                     </a>
                     <a href="https://www.linkedin.com/pub/ivo-spasov/107/929/644">
-                        <img src="images/LinkedIn-Button-Copy.png" alt="linked in button"
+                        <img src="content/images/LinkedIn-Button-Copy.png" alt="linked in button"
                              class="img-responsive external"/>
                     </a>
                     <a href="https://github.com/ivossss">
-                        <img src="images/GitHub-Mark-Light-64px.png" alt="git hub button"
+                        <img src="content/images/GitHub-Mark-Light-64px.png" alt="git hub button"
                              class="img-responsive external"/>
                     </a>
                 </div>
             </div>
         </div>
     </header>
-    <section>
+    <section ng-repeat="project in projects">
         <div class="row">
             <h2 class="col-sm-12">
-				<span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
-				<em>Speed Hero</em>
-			</h2>
+                <span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
+                <em>{{project.name}}</em>
+            </h2>
         </div>
         <div class="row">
             <p class="col-sm-12">
-                This is a gallery style, multi-author blog web application for cars. On the index page are the latest
-                posts displayed in reverse chronological order. A post has photos and text describing the photos.
-                Comments section is available for every individual post at the bottom.
-                Unregistered users can only see the posts. Registered users can leave comments below the posts.
-                Administrators can create, edit and delete posts and comments.
+                {{project.description}}
             </p>
         </div>
         <div class="row">
             <div class="col-sm-4">
-                <a href="http://speedhero.apphb.com/">
-                    <img src="images/SpeedHero.png" alt="speed-hero" class="img-responsive"/>
+                <a href="{{project.url}}">
+                    <img src="{{project.imagePath}}" alt="project-image" class="img-responsive"/>
                 </a>
             </div>
             <div class="col-sm-8">
                 <ul class="list-group">
                     <li class="list-group-item active">About</li>
+                    <li class="list-group-item" ng-repeat="about in project.about">
+                        <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
+
+                        <span ng-bind-html="about.text"></span>
+
+                    </li>
+
                     <li class="list-group-item">
                         <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                        Technology - ASP.NET MVC 5
+                        There is protection against
+                        <span data-toggle="tooltip" data-placement="top" title="Cross-site Scripting ">XSS</span>
+                        attack
                     </li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                        Languages - C#, HTML5, CSS3
-                    </li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                        Database server - MS SQL Server
-                    </li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                        ORM - Entity Framework with Code First modeling workflow
-                    </li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                        Repository Pattern is used to give abstraction over the data layer
-                    </li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                        Inversion of Control Container - <a href="http://www.ninject.org/">Ninject</a>
-                    </li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                        <a href="http://automapper.org/">AutoMapper</a>
-                        is used to automatically map the domain model objects to the ViewModel objects
-                    </li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                        <a href="http://jquery.com/">jQuery</a>
-                        is used to access and manipulate the DOM tree
-                    </li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                        Page is responsive on all screen sizes with <a href="http://getbootstrap.com/">Bootstrap</a>
-                    </li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                        Controls - Telerik Kendo UI
-                    </li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                        AJAX is used for adding new comments
-                    </li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                        There is one minute caching on the index page
-                    </li>
-                        <li class="list-group-item">
-                        <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                            There is protection against
-                            <span  data-toggle="tooltip" data-placement="top" title="Cross-site Scripting ">XSS</span>
-                            attack
-                        </li>
                     <li class="list-group-item">
                         <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
                         IDE - Visual Studio
@@ -150,9 +103,9 @@
     <section>
         <div class="row">
             <h2 class="col-sm-12">
-				<span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
-				<em>Minesweeper</em>				
-			</h2>
+                <span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
+                <em>Minesweeper</em>
+            </h2>
         </div>
         <div class="row">
             <p class="col-sm-12">
@@ -162,7 +115,7 @@
         <div class="row">
             <div class="col-sm-4">
                 <a href="http://ivossss.github.io/Minesweeper/">
-                    <img src="images/minesweeper.png" alt="minesweeper" class="img-responsive"/>
+                    <img src="content/images/minesweeper.png" alt="minesweeper" class="img-responsive"/>
                 </a>
             </div>
             <div class="col-sm-8">
@@ -209,6 +162,7 @@
                     <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
                     Game rules
                 </a>
+
                 <div class="modal fade" id="minesweeper-rules" tabindex="-1">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -224,14 +178,16 @@
                                     <li>Uncover a number, and it tells you how many mines
                                         lay hidden in the eight surrounding tiles.
                                         Information you use to deduce which nearby
-                                        squares are safe to click.</li>
+                                        squares are safe to click.
+                                    </li>
                                     <li>Use left mouse click to see what is behind a tile and a
-                                        right mouse click to mark a place of possible mine.</li>
+                                        right mouse click to mark a place of possible mine.
+                                    </li>
                                 </ol>
                             </div>
                             <div class="modal-footer">
                                 <a href="http://ivossss.github.io/Minesweeper/"
-                                        class="btn btn-primary">Play</a>
+                                   class="btn btn-primary">Play</a>
                             </div>
                         </div>
                     </div>
@@ -240,9 +196,11 @@
         </div>
     </section>
     <footer>
-        <hr />
+        <hr/>
         <div class="pull-right">
-            <p><small><em>2015 - The projects I've made from scratch - by Ivo Spasov</em></small></p>
+            <p>
+                <small><em>2015 - The projects I've made from scratch - by Ivo Spasov</em></small>
+            </p>
         </div>
     </footer>
 </div>
@@ -250,6 +208,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="js/script.js" type="text/javascript"></script>
+<script src="libs/angular/angular.min.js" type="text/javascript"></script>
+<script src="libs/angular/angular-sanitize.min.js" type="text/javascript"></script>
+<script src="app/app.js" type="text/javascript"></script>
+<script src="app/controllers/homeCtrl.js" type="text/javascript"></script>
 </body>
 </html>
 
