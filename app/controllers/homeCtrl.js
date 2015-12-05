@@ -9,31 +9,24 @@ portfolio.controller('homeCtrl', ['$scope',
             ' Unregistered users can only see the posts. Registered users can leave comments below the posts.' +
             ' Administrators can create, edit and delete posts and comments.';
 
-        var speedHeroAbout = [{
-            text: 'Technology - ASP.NET MVC 5'
-        }, {
-            text: 'Languages - C#, HTML5, CSS3'
-        }, {
-            text: 'Database server - MS SQL Server'
-        }, {
-            text: 'ORM - Entity Framework with Code First modeling workflow'
-        }, {
-            text: 'Repository Pattern is used to give abstraction over the data layer'
-        }, {
-            text: 'Inversion of Control Container - <a href="http://www.ninject.org/">Ninject</a>',
-        },{
-            text: '<a href="http://automapper.org/">AutoMapper</a> is used to automatically map the domain model objects to the ViewModel objects'
-        },{
-            text: '<a href="http://jquery.com/">jQuery</a> is used to access and manipulate the DOM tree'
-        },{
-            text: 'Page is responsive on all screen sizes with <a href="http://getbootstrap.com/">Bootstrap</a>'
-        },{
-            text: 'Controls - Telerik Kendo UI'
-        },{
-            text: 'AJAX is used for adding new comments'
-        },{
-            text: 'There is one minute caching on the index page'
-        }];
+        var speedHeroAbout = [
+            'Technology - ASP.NET MVC 5',
+            'Languages - C#, HTML5, CSS3',
+            'Database server - MS SQL Server',
+            'ORM - Entity Framework with Code First modeling workflow',
+            'Repository Pattern is used to give abstraction over the data layer',
+            'Inversion of Control Container - <a href="http://www.ninject.org/">Ninject</a>',
+            '<a href="http://automapper.org/">AutoMapper</a> is used to automatically map the domain model objects to the ViewModel objects',
+            '<a href="http://jquery.com/">jQuery</a> is used to access and manipulate the DOM tree',
+            'Page is responsive on all screen sizes with <a href="http://getbootstrap.com/">Bootstrap</a>',
+            'Controls - Telerik Kendo UI',
+            'AJAX is used for adding new comments',
+            'There is one minute caching on the index page',
+            'There is protection against XSS attack',
+            'IDE - Visual Studio',
+            '<a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control" data-toggle="tooltip" data-placement="top" title="Version control system">VCS - Git</a>',
+            '<a href="https://github.com/ivossss/SpeedHero">Source code</a>'
+        ];
 
         var projects = [{
             name: 'Speed Hero',
