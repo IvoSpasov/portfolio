@@ -47,43 +47,31 @@
             </div>
         </div>
     </header>
-    <section>
+    <section ng-repeat="project in projects">
         <div class="row">
             <h2 class="col-sm-12">
                 <span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
-                <em>Speed Hero</em>
+                <em>{{project.name}}</em>
             </h2>
         </div>
         <div class="row">
             <p class="col-sm-12">
-                This is a gallery style, multi-author blog web application for cars. On the index page are the latest
-                posts displayed in reverse chronological order. A post has photos and text describing the photos.
-                Comments section is available for every individual post at the bottom.
-                Unregistered users can only see the posts. Registered users can leave comments below the posts.
-                Administrators can create, edit and delete posts and comments.
+                {{project.description}}
             </p>
         </div>
         <div class="row">
             <div class="col-sm-4">
-                <a href="http://speedhero.apphb.com/">
-                    <img src="content/images/SpeedHero.png" alt="speed-hero" class="img-responsive"/>
+                <a href="{{project.url}}">
+                    <img src="{{project.imagePath}}" alt="project-image" class="img-responsive"/>
                 </a>
             </div>
             <div class="col-sm-8">
                 <ul class="list-group">
                     <li class="list-group-item active">About</li>
-                    <li class="list-group-item" ng-repeat="info in speedHeroInfo">
+                    <li class="list-group-item" ng-repeat="about in project.about">
                         <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
 
-                        <span ng-if="info.link && info.linkIsInFront">
-                            <a href="{{info.link}}" ng-bind="info.linkText"></a>
-                        </span>
-
-                        <span ng-bind-html="info.text"></span>
-
-                        <span ng-if="info.link && !info.linkIsInFront">
-                            <a href="{{info.link}}">{{info.linkText}}</a>
-                        </span>
+                        <span ng-bind-html="about.text"></span>
 
                     </li>
 
