@@ -1,3 +1,3 @@
 'use strict';
 
-var portfolio = angular.module('portfolio', ['ngSanitize']);
+var portfolioModule = angular.module('portfolioModule', ['ngSanitize']);

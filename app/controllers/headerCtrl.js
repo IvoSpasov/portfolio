@@ -1,6 +1,6 @@
 'use strict';
 
-portfolio.controller('headerCtrl', ['$scope',
+portfolioModule.controller('headerCtrl', ['$scope',
     function headerCtrl($scope){
         $scope.contacts = [{
             url: 'mailto:ivospasov89@gmail.com',
