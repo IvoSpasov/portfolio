@@ -70,105 +70,48 @@
                 <ul class="list-group">
                     <li class="list-group-item active">About</li>
                     <li class="list-group-item" ng-repeat="about in project.about">
-                        <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                        <span ng-bind-html="about"></span>
+                        <span ng-class="about.glyphiconType" aria-hidden="true"></span>
+                        <span ng-bind-html="about.text"></span>
                     </li>
                 </ul>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="row">
-            <h2 class="col-sm-12">
-                <span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
-                <em>Minesweeper</em>
-            </h2>
-        </div>
-        <div class="row">
-            <p class="col-sm-12">
-                A JavaScript version of the popular Microsoft Windows game.
-            </p>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <a href="http://ivossss.github.io/Minesweeper/">
-                    <img src="content/images/minesweeper.png" alt="minesweeper" class="img-responsive"/>
-                </a>
-            </div>
-            <div class="col-sm-8">
-                <ul class="list-group">
-                    <li class="list-group-item active">About</li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
-                        Languages - JavaScript, HTML5, CSS3
-                    </li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
-                        Library - <a href="http://jquery.com/">jQuery</a>
-                    </li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
-                        Drawing is done with
-                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas</a>
-                    </li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
-                        Page is responsive on all screen sizes with <a href="http://getbootstrap.com/">Bootstrap</a>
-                    </li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
-                        Recursion algorithm is used to open all empty tiles next to each other
-                    </li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
-                        IDE - JetBrains WebStorm
-                    </li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-flash" aria-hidden="true"></span>
-                        <a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control"
-                           data-toggle="tooltip" data-placement="top" title="Version control system">
-                            VCS - Git
-                        </a>
-                    </li>
-                    <li class="list-group-item">
-                        <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
-                        <a href="https://github.com/ivossss/Minesweeper">Source Code</a>
-                    </li>
-                </ul>
-                <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#minesweeper-rules">
-                    <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-                    Game rules
-                </a>
 
-                <div class="modal fade" id="minesweeper-rules" tabindex="-1">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button class="close" data-dismiss="modal">&times;</button>
-                                <h3 class="modal-title">Minesweeper game rules</h3>
-                            </div>
-                            <div class="modal-body">
-                                The rules are the same as in the original game:
-                                <ol>
-                                    <li>Uncover a mine, and the game ends.</li>
-                                    <li>Uncover an empty tile, and you keep playing.</li>
-                                    <li>Uncover a number, and it tells you how many mines
-                                        lay hidden in the eight surrounding tiles.
-                                        Information you use to deduce which nearby
-                                        squares are safe to click.
-                                    </li>
-                                    <li>Use left mouse click to see what is behind a tile and a
-                                        right mouse click to mark a place of possible mine.
-                                    </li>
-                                </ol>
-                            </div>
-                            <div class="modal-footer">
-                                <a href="http://ivossss.github.io/Minesweeper/"
-                                   class="btn btn-primary">Play</a>
+                <div ng-if="project.name == 'Minesweeper'">
+                    <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#minesweeper-rules">
+                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                        Game rules
+                    </a>
+
+                    <div class="modal fade" id="minesweeper-rules" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button class="close" data-dismiss="modal">&times;</button>
+                                    <h3 class="modal-title">Minesweeper game rules</h3>
+                                </div>
+                                <div class="modal-body">
+                                    The rules are the same as in the original game:
+                                    <ol>
+                                        <li>Uncover a mine, and the game ends.</li>
+                                        <li>Uncover an empty tile, and you keep playing.</li>
+                                        <li>Uncover a number, and it tells you how many mines
+                                            lay hidden in the eight surrounding tiles.
+                                            Information you use to deduce which nearby
+                                            squares are safe to click.
+                                        </li>
+                                        <li>Use left mouse click to see what is behind a tile and a
+                                            right mouse click to mark a place of possible mine.
+                                        </li>
+                                    </ol>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="http://ivossss.github.io/Minesweeper/"
+                                       class="btn btn-primary">Play</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
