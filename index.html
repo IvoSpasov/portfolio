@@ -18,114 +18,23 @@
     <script src="libs/angular/angular.min.js" type="text/javascript"></script>
     <title>Ivo's Portfolio</title>
 </head>
-<body ng-app="portfolioModule">
-<div class="container">
-    <header class="well" ng-controller="headerCtrl" ng-cloak>
-        <div class="row">
-            <div class="col-sm-11 col-sm-offset-1">
-                <h1>The projects I've made from scratch</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-offset-1 col-sm-8 col-md-offset-1 col-md-9">
-                <p>by Ivo Spasov</p>
-            </div>
-            <div class="col-sm-3 col-md-2">
-                <div class="pull-right">
-                    <a ng-repeat="contact in contacts" ng-href="{{contact.url}}">
-                        <img ng-src="{{contact.imagePath}}" alt={{contact.alt}}
-                             class="img-responsive external"/>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
-    <div ng-controller="projectsCtrl" ng-cloak>
-        <section ng-repeat="project in projects">
-            <div class="row">
-                <h2 class="col-sm-12">
-                    <span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
-                    <em>{{project.name}}</em>
-                </h2>
-            </div>
-            <div class="row">
-                <p class="col-sm-12">
-                    {{project.description}}
-                </p>
-            </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <a ng-href="{{project.url}}">
-                        <img ng-src="{{project.imagePath}}" alt="{{project.imageAlt}}" class="img-responsive"/>
-                    </a>
-                </div>
-                <div class="col-sm-8">
-                    <ul class="list-group">
-                        <li class="list-group-item active">About</li>
-                        <li class="list-group-item" ng-repeat="about in project.about">
-                            <span ng-class="about.glyphiconType || project.defaultGlyphiconType"
-                                  aria-hidden="true"></span>
-                            <span ng-bind-html="about.text"></span>
-                        </li>
-                    </ul>
-                    <div ng-if="project.name == 'Minesweeper'">
-                        <a href="#" class="btn btn-success btn-block" data-toggle="modal"
-                           data-target="#minesweeper-rules">
-                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-                            Game rules
-                        </a>
-                        <div class="modal fade" id="minesweeper-rules" tabindex="-1">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button class="close" data-dismiss="modal">&times;</button>
-                                        <h3 class="modal-title">Minesweeper game rules</h3>
-                                    </div>
-                                    <div class="modal-body">
-                                        The rules are the same as in the original game:
-                                        <ol>
-                                            <li>Uncover a mine, and the game ends.</li>
-                                            <li>Uncover an empty tile, and you keep playing.</li>
-                                            <li>Uncover a number, and it tells you how many mines
-                                                lay hidden in the eight surrounding tiles.
-                                                Information you use to deduce which nearby
-                                                squares are safe to click.
-                                            </li>
-                                            <li>Use left mouse click to see what is behind a tile and a
-                                                right mouse click to mark a place of possible mine.
-                                            </li>
-                                        </ol>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <a href="http://ivossss.github.io/Minesweeper/"
-                                           class="btn btn-primary">Play</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <footer>
-        <hr/>
-        <div class="pull-right">
-            <p>
-                <small><em>2015 - The projects I've made from scratch - by Ivo Spasov</em></small>
-            </p>
-        </div>
-    </footer>
-</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="js/script.js" type="text/javascript"></script>
-<script src="libs/angular/angular-sanitize.min.js" type="text/javascript"></script>
-<script src="app/app.js" type="text/javascript"></script>
-<script src="app/controllers/headerCtrl.js" type="text/javascript"></script>
-<script src="app/controllers/projectsCtrl.js" type="text/javascript"></script>
-<script src="app/services/projectsService.js" type="text/javascript"></script>
+<body ng-app="portfolioModule">
+    <div class="container">
+        <div ng-include="'app/views/header.html'"></div>
+        <div ng-view></div>
+        <div ng-include="'app/views/footer.html'"></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+    <script src="libs/angular/angular-sanitize.min.js" type="text/javascript"></script>
+    <script src="libs/angular/angular-route.min.js" type="text/javascript"></script>
+    <script src="app/app.js" type="text/javascript"></script>
+    <script src="app/controllers/headerCtrl.js" type="text/javascript"></script>
+    <script src="app/controllers/projectsCtrl.js" type="text/javascript"></script>
+    <script src="app/services/projectsService.js" type="text/javascript"></script>
 </body>
 </html>
 

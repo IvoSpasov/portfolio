@@ -1,0 +1,20 @@
+<header class="well" ng-controller="headerCtrl" ng-cloak>
+    <div class="row">
+        <div class="col-sm-11 col-sm-offset-1">
+            <h1>The projects I've made from scratch</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-offset-1 col-sm-8 col-md-offset-1 col-md-9">
+            <p>by Ivo Spasov</p>
+        </div>
+        <div class="col-sm-3 col-md-2">
+            <div class="pull-right">
+                <a ng-repeat="contact in contacts" ng-href="{{contact.url}}">
+                    <img ng-src="{{contact.imagePath}}" alt={{contact.alt}}
+                         class="img-responsive external"/>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
