@@ -18,7 +18,7 @@ portfolioModule.factory('projects', function(){
     }, {
         text: 'Languages - C#, HTML5, CSS3'
     }, {
-        text: 'Database server - MS SQL Server'
+        text: 'Database server - Microsoft SQL Server'
     }, {
         text: 'ORM - Entity Framework with Code First modeling workflow'
     }, {
