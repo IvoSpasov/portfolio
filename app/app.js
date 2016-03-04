@@ -1,12 +1,14 @@
-'use strict';
+(function(){
+    'use strict';
 
-var portfolioModule = angular
-    .module('portfolioModule', ['ngRoute', 'ngSanitize'])
-    .config(function($routeProvider){
-        $routeProvider.when('/home', {
-            templateUrl: 'app/views/section.html',
-            controller: 'projectsCtrl'
+    angular
+        .module('myPortfolio', ['ngRoute', 'ngSanitize'])
+        .config(function($routeProvider){
+            $routeProvider.when('/home', {
+                templateUrl: 'app/views/section.html',
+                controller: 'projectsController'
+            });
+
+            $routeProvider.otherwise({redirectTo: '/home'});
         });
-
-        $routeProvider.otherwise({redirectTo: '/home'});
-    });
+})();
