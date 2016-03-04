@@ -3,11 +3,11 @@
 
     angular
         .module('myPortfolio')
-        .controller('projectsController', projectsController);
+        .controller('ProjectsController', ProjectsController);
 
-    projectsController.$inject = ['$scope', '$routeParams', 'projects'];
+    ProjectsController.$inject = ['$scope', '$routeParams', 'projects'];
 
-    function projectsController($scope, $routeParams, projects) {
+    function ProjectsController($scope, $routeParams, projects) {
         $scope.projects = projects.getAll();
     }
 })();

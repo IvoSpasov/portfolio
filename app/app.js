@@ -6,7 +6,7 @@
         .config(function($routeProvider){
             $routeProvider.when('/home', {
                 templateUrl: 'app/views/section.html',
-                controller: 'projectsController'
+                controller: 'ProjectsController'
             });
 
             $routeProvider.otherwise({redirectTo: '/home'});
