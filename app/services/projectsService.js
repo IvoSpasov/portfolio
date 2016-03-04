@@ -1,6 +1,8 @@
 'use strict';
 
-portfolioModule.factory('projects', function(){
+angular
+    .module('myPortfolio')
+    .factory('projects', function(){
     var speedHeroDescription = 'This is a gallery style, multi-author blog web application for cars.' +
         ' On the index page are the latest posts displayed in reverse chronological order.' +
         ' A post has photos and text describing the photos.' +

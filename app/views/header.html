@@ -1,4 +1,4 @@
-<header class="well" ng-controller="headerCtrl" ng-cloak>
+<header class="well">
     <div class="row">
         <div class="col-sm-11 col-sm-offset-1">
             <h1>The projects I've made from scratch</h1>
@@ -9,12 +9,15 @@
             <p>by Ivo Spasov</p>
         </div>
         <div class="col-sm-3 col-md-2">
-            <div class="pull-right">
-                <a ng-repeat="contact in contacts" ng-href="{{contact.url}}">
-                    <img ng-src="{{contact.imagePath}}" alt={{contact.alt}}
-                         class="img-responsive external"/>
+                <a href="mailto:ivospasov89@gmail.com">
+                    <i class="fa fa-envelope-o fa-fw fa-2x"></i>
                 </a>
-            </div>
+                <a href="https://www.linkedin.com/pub/ivo-spasov/107/929/644">
+                    <i class="fa fa-linkedin-square fa-fw fa-2x"></i>
+                </a>
+                <a href="https://github.com/ivossss">
+                    <i class="fa fa-github-square fa-fw fa-2x"></i>
+                </a>
         </div>
     </div>
 </header>
