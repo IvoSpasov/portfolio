@@ -8,6 +8,6 @@
     ProjectsController.$inject = ['$scope', '$routeParams', 'projects'];
 
     function ProjectsController($scope, $routeParams, projects) {
-        $scope.projects = projects.getAll();
+        $scope.projects = projects.getAll;
     }
 })();
