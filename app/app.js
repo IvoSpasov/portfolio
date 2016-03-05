@@ -4,11 +4,11 @@
     angular
         .module('myPortfolio', ['ngRoute', 'ngSanitize'])
         .config(function($routeProvider){
-            $routeProvider.when('/home', {
+            $routeProvider.when('/', {
                 templateUrl: 'app/views/section.html',
                 controller: 'ProjectsController'
             });
 
-            $routeProvider.otherwise({redirectTo: '/home'});
+            $routeProvider.otherwise({redirectTo: '/'});
         });
 })();
