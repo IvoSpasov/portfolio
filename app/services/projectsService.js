@@ -69,7 +69,7 @@
         }, {
             text: vcsGitLink
         }, {
-            text: '<a href="https://github.com/ivossss/Minesweeper">Source Code</a>',
+            text: '<a href="https://github.com/ivossss/minesweeper">Source Code</a>',
             glyphiconType: glyphiconLink
         }];
 
@@ -84,7 +84,7 @@
         }, {
             name: 'Minesweeper',
             description: 'A JavaScript version of the popular Microsoft Windows game.',
-            url: 'http://ivossss.github.io/Minesweeper/',
+            url: 'http://ivossss.github.io/minesweeper/',
             imagePath: 'content/images/minesweeper.png',
             imageAlt: 'Minesweeper picture',
             about: minesweeperAbout,
