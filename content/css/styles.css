@@ -28,7 +28,7 @@ li.active {
 }
 
 .well {
-    background-image: url("/portfolio/content/images/Heading-Background.jpg");
+    background-image: url("/content/images/HeaderBackground.jpg");
     background-repeat: no-repeat;
     background-position: top center;
     background-attachment: fixed;
