@@ -15,13 +15,12 @@
 
         var vcsGitLink = '<a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control" class="vcs" title="Version control system">' +
                 'VCS - Git</a>',
-            bootstrapText = 'Page is responsive on all screen sizes with <a href="http://getbootstrap.com/">Bootstrap</a>',
             glyphiconLink = 'glyphicon glyphicon-link';
 
         var speedHeroAbout = [{
             text: 'Technology - ASP.NET MVC 5'
         }, {
-            text: 'Languages - C#, HTML5, CSS3'
+            text: 'Languages used - C#, HTML5, CSS3'
         }, {
             text: 'Database server - Microsoft SQL Server'
         }, {
@@ -35,7 +34,7 @@
         }, {
             text: '<a href="http://jquery.com/">jQuery</a> is used to access and manipulate the DOM tree'
         }, {
-            text: bootstrapText
+            text: 'Page is responsive on all screen sizes with <a href="http://getbootstrap.com/">Bootstrap</a>'
         }, {
             text: 'Controls - Telerik Kendo UI'
         }, {
@@ -49,19 +48,17 @@
         }, {
             text: vcsGitLink
         }, {
-            text: '<a href="https://github.com/ivossss/SpeedHero">Source Code</a>',
+            text: '<a href="https://github.com/ivospasov/SpeedHero">Source Code</a>',
             glyphiconType: glyphiconLink
         }];
 
         var minesweeperAbout = [{
-            text: 'Languages - JavaScript, HTML5, CSS3'
+            text: 'Languages used - JavaScript, HTML5, CSS3'
         }, {
-            text: 'Library - <a href="http://jquery.com/">jQuery</a>'
+            text: 'Libraries used - <a href="http://jquery.com/">jQuery</a>, <a href="http://getbootstrap.com/">Bootstrap</a>'
         }, {
-            text: 'Drawing is done with ' +
-            '<a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">Canvas</a>'
-        }, {
-            text: bootstrapText
+            text: 'Drawing is done with the HTML5 element ' +
+            '<a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">"Canvas"</a>'
         }, {
             text: 'Recursion algorithm is used to open all empty tiles next to each other'
         }, {
@@ -69,7 +66,7 @@
         }, {
             text: vcsGitLink
         }, {
-            text: '<a href="https://github.com/ivossss/minesweeper">Source Code</a>',
+            text: '<a href="https://github.com/ivospasov/minesweeper">Source Code</a>',
             glyphiconType: glyphiconLink
         }];
 
@@ -84,7 +81,7 @@
         }, {
             name: 'Minesweeper',
             description: 'A JavaScript version of the popular Microsoft Windows game.',
-            url: 'http://ivossss.github.io/minesweeper/',
+            url: 'http://ivospasov.github.io/minesweeper/',
             imagePath: 'content/images/minesweeper.png',
             imageAlt: 'Minesweeper picture',
             about: minesweeperAbout,
