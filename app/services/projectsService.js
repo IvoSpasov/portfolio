@@ -11,7 +11,7 @@
             ' A post has photos and text describing the photos.' +
             ' Comments section is available for every individual post at the bottom.' +
             ' Unregistered users can only see the posts. Registered users can leave comments below the posts.' +
-            ' Administrators can create, edit and delete posts and comments.';
+            ' Administrators can create, edit and delete posts and comments. The site is slow when accessed for a first time, se please be patient.';
 
         var vcsGitLink = '<a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control" class="vcs" title="Version control system">' +
                 'VCS - Git</a>',
