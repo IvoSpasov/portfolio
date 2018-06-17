@@ -42,6 +42,10 @@ export class ProjectService {
         )
     ];
 
+    getProjects() {
+        return this.projects.slice();
+    }
+
     getProject(name: string) {
         let proj: Project;
         this.projects.forEach((project: Project) => {
