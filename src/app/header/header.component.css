@@ -1,4 +1,8 @@
 .well {
+    background-image: url("/assets/images/header-background.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
     height: 300px;
     padding-top: 150px;
 }
