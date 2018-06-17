@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Project } from '../project.model';
 import { ProjectService } from '../project.service';
 
 @Component({
@@ -15,11 +14,10 @@ export class ProjectsMenuComponent implements OnInit {
     ngOnInit() {
         const projects = this.projectService.getProjects();
         projects.forEach(p => {
-            this.projects.push({ name: p.name, url: this.convertToUrl(p.name) });
+            this.projects.push({
+                name: p.name,
+                url: this.projectService.convertToUrl(p.name)
+            });
         });
-    }
-
-    private convertToUrl(name: string) {
-        return name.split(' ').join('-').toLowerCase();
     }
 }

@@ -49,12 +49,17 @@ export class ProjectService {
     getProject(name: string) {
         let proj: Project;
         this.projects.forEach((project: Project) => {
-            const nameAsUrl = project.name.split(' ').join('-').toLowerCase();
+            const nameAsUrl = this.convertToUrl(project.name);
             if (name === nameAsUrl) {
                 proj = project;
             }
         });
 
         return proj;
+    }
+
+    // This method can be added to a different and more general utilities class.
+    convertToUrl(name: string) {
+        return name.split(' ').join('-').toLowerCase();
     }
 }
