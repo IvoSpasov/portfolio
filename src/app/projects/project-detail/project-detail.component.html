@@ -1,1 +1,27 @@
-Hello from project detail
+<div class="row">
+    <h2 class="col-sm-12">
+        <span class="glyphicon glyphicon-apple" aria-hidden="true"></span>
+        <em>{{project.name}}</em>
+    </h2>
+</div>
+<div class="row">
+    <p class="col-sm-12">
+        {{project.description}}
+    </p>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        <!-- <a ng-href="{{project.url}}">
+            <img ng-src="{{project.imagePath}}" alt="{{project.imageAlt}}" class="img-responsive" />
+        </a> -->
+    </div>
+    <div class="col-sm-8">
+        <ul class="list-group">
+            <li class="list-group-item active">Details</li>
+            <li class="list-group-item" *ngFor="let detail of project.details">
+                <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
+                <span>{{detail}}</span>
+            </li>
+        </ul>
+    </div>
+</div>
