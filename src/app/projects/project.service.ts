@@ -13,8 +13,33 @@ export class ProjectService {
             [
                 'Technology - ASP.NET MVC 5',
                 'Languages used - C#, HTML5, CSS3',
-                'Database server - Microsoft SQL Server'
-            ])
+                'Database server - Microsoft SQL Server',
+                'ORM - Entity Framework with Code First modeling workflow',
+                'Repository Pattern is used to give abstraction over the data layer',
+                'Inversion of Control Container - <a href="http://www.ninject.org/">Ninject</a>',
+                '<a href="http://automapper.org/">AutoMapper</a> is used to automatically map the domain model objects to the ViewModel objects',
+                '<a href="http://jquery.com/">jQuery</a> is used to access and manipulate the DOM tree',
+                'Page is responsive on all screen sizes with <a href="http://getbootstrap.com/">Bootstrap</a>',
+                'Controls - Telerik Kendo UI',
+                'AJAX is used for adding new comments',
+                'There is one minute caching on the index page',
+                'There is protection against XSS attack',
+                'IDE - Visual Studio'
+            ]),
+        new Project(
+            'Minesweeper',
+            'A JavaScript version of the popular Microsoft Windows game.',
+            'http://ivospasov.github.io/minesweeper/',
+            [
+                'Languages used - JavaScript, HTML5, CSS3',
+                'Libraries used - <a href="http://jquery.com/">jQuery</a>, <a href="http://getbootstrap.com/">Bootstrap</a>',
+                'Drawing is done with the HTML5 element <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API">"Canvas"</a>',
+                'Recursion algorithm is used to open all empty tiles next to each other',
+                'IDE - JetBrains WebStorm',
+                '<a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control" class="vcs" title="Version control system"> VCS - Git</a>',
+                '<a href="https://github.com/ivospasov/minesweeper">Source Code</a>'
+            ]
+        )
     ];
 
     getProject(name: string) {
