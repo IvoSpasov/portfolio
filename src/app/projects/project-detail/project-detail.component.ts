@@ -18,10 +18,9 @@ export class ProjectDetailComponent implements OnInit {
         this.route.params.subscribe(
             (params: Params) => {
                 const projectName = params['projectName'];
+                this.imagePath = `/assets/images/${projectName}.png`;
                 this.project = this.projectService.getProject(projectName);
                 // TODO: if project is null then redirect to not found page
-
-                this.imagePath = `/assets/images/${this.projectService.convertToUrl(this.project.name)}.png`;
             }
         );
     }
