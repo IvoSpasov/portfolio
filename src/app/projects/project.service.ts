@@ -24,7 +24,9 @@ export class ProjectService {
                 'AJAX is used for adding new comments',
                 'There is one minute caching on the index page',
                 'There is protection against XSS attack',
-                'IDE - Visual Studio'
+                'IDE - Visual Studio',
+                '<a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control" class="vcs" title="Version control system">VCS - Git</a>',
+                '<a href="https://github.com/ivospasov/SpeedHero">Source Code</a>'
             ]),
         new Project(
             'Minesweeper',

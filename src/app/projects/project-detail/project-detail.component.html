@@ -11,8 +11,8 @@
 </div>
 <div class="row">
     <div class="col-sm-4">
-        <a href="{{project.url}}">
-            <img src="{{imagePath}}" alt="{{project.name}}" class="img-responsive" />
+        <a [href]="project.url">
+            <img [src]="imagePath" [alt]="project.name" class="img-responsive" />
         </a>
     </div>
     <div class="col-sm-8">
@@ -20,7 +20,7 @@
             <li class="list-group-item active">Details</li>
             <li class="list-group-item" *ngFor="let detail of project.details">
                 <span class="glyphicon glyphicon-leaf" aria-hidden="true"></span>
-                <span>{{detail}}</span>
+                <span [innerHTML]="detail"></span>
             </li>
         </ul>
     </div>
