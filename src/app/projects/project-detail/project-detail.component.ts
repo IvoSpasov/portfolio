@@ -18,7 +18,7 @@ export class ProjectDetailComponent implements OnInit {
         this.route.params.subscribe(
             (params: Params) => {
                 const projectName = params['projectName'];
-                this.imagePath = `/assets/images/${projectName}.png`;
+                this.imagePath = `./assets/images/${projectName}.png`;
                 this.project = this.projectService.getProject(projectName);
 
                 if (!this.project) {
