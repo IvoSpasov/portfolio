@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 import { Project } from '../project.model';
 import { ProjectService } from '../project.service';
@@ -12,7 +12,7 @@ export class ProjectDetailComponent implements OnInit {
     project: Project;
     imagePath: string;
 
-    constructor(private projectService: ProjectService, private route: ActivatedRoute) { }
+    constructor(private projectService: ProjectService, private route: ActivatedRoute, private router: Router) { }
 
     ngOnInit() {
         this.route.params.subscribe(
@@ -20,7 +20,10 @@ export class ProjectDetailComponent implements OnInit {
                 const projectName = params['projectName'];
                 this.imagePath = `/assets/images/${projectName}.png`;
                 this.project = this.projectService.getProject(projectName);
-                // TODO: if project is null then redirect to not found page
+
+                if (!this.project) {
+                    this.router.navigate(['../speed-hero'], { relativeTo: this.route });
+                }
             }
         );
     }
